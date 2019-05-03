@@ -262,9 +262,9 @@ class MainDialog extends ComponentDialog {
         if (cCard9_D_10.includes(stepContext.result)) {
             userInfo.u_a_2 = stepContext.result
 
-            let day = stepContext.context.activity.localTimestamp.toString()
-            let re  = /\d{2}\:\d{2}\:\d{2}/
-            let td = re.exec(day)
+            // let day = stepContext.context.activity.localTimestamp.toString()
+            // let re  = /\d{2}\:\d{2}\:\d{2}/
+            // let td = re.exec(day)
             userInfo.u_t_2 = "10:30"
         } else {
             await stepContext.context.sendActivity("叫你用選的，沒叫你用打的")
