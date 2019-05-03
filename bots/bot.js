@@ -35,7 +35,7 @@ class AI_KPIBot extends ActivityHandler {
                     // let td = re.exec(day)
 
                     const startcard = MessageFactory.suggestedActions(["開始工作"])
-                    await turnContext.sendActivity(`現在是台北時間: ${stepContext.context.activity.localTimestamp}`); 
+                    await turnContext.sendActivity(`現在是台北時間: 9:00`); 
                     await turnContext.sendActivity(startcard); 
                 }
             }
