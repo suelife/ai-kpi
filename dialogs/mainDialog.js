@@ -100,7 +100,10 @@ class MainDialog extends ComponentDialog {
         await stepContext.context.sendActivity(`Do: 1次`)
         await stepContext.context.sendActivity(`開始時間: ${userInfo.u_t_1}`)
 
-        let cCard2_D = ["開始工作"+userInfo.u_p, "修改開工作項目", "修改開始時間"]
+        let fi_1 = "開始工作"+userInfo.u_p
+
+        // let cCard2_D = [fi_1, "修改開工作項目", "修改開始時間"]
+        let cCard2_D = ["開始工作", "修改開工作項目", "修改開始時間"]
         const cCard2 = MessageFactory.suggestedActions(cCard2_D)
         
         if (!userInfo.u_p_1) {
