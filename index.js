@@ -36,6 +36,7 @@ adapter.onTurnError = async (context, error) => {
     console.error(`\n [onTurnError]: ${ error }`);
     // Send a message to the user
     await context.sendActivity(`Oops. Something went wrong!`);
+    await context.sendActivity(`${ error }`);
 };
 
 // Create the Storage.
