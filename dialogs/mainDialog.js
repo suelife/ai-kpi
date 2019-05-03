@@ -300,7 +300,8 @@ class MainDialog extends ComponentDialog {
         }
         console.log("userLast : ", userInfo.u_l)
 
-        await stepContext.context.sendActivity(`好的，辛苦了!已經紀錄完成!!`)
+        await stepContext.context.sendActivity(`好的，辛苦了!`)
+        await stepContext.context.sendActivity(`已經紀錄完成!!`)
         return await stepContext.endDialog()
     }
 }
