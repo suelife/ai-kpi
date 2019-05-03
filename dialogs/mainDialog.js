@@ -90,10 +90,10 @@ class MainDialog extends ComponentDialog {
         if (userInfo.u_p === undefined && stepContext.result) {
             userInfo.u_p = stepContext.result
 
-            let day = stepContext.context.activity.localTimestamp.toString()
+            // let day = stepContext.context.activity.localTimestamp.toString()
             // let re  = /\d{2}\:\d{2}\:\d{2}/
             // let td = re.exec(day)
-            userInfo.u_t_1 = day
+            userInfo.u_t_1 = stepContext.context.activity.localTimestamp
         }
         console.log("userPlan : ", userInfo.u_p)
         await stepContext.context.sendActivity(`Plan: ${userInfo.u_p}`)

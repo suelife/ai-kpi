@@ -29,12 +29,13 @@ class AI_KPIBot extends ActivityHandler {
             for (let cnt = 0; cnt < membersAdded.length; cnt++) {
                 if (membersAdded[cnt].id !== turnContext.activity.recipient.id) {
                     // console.log("turnContextlocalTimestamp : ", turnContext.activity.localTimestamp)
-                    let day = turnContext.activity.localTimestamp.toString()
+
+                    // let day = turnContext.activity.localTimestamp.toString()
                     // let re  = /\d{2}\:\d{2}\:\d{2}/
                     // let td = re.exec(day)
 
                     const startcard = MessageFactory.suggestedActions(["開始工作"])
-                    await turnContext.sendActivity(`現在是台北時間: ${day}`); 
+                    await turnContext.sendActivity(`現在是台北時間: ${stepContext.context.activity.localTimestamp}`); 
                     await turnContext.sendActivity(startcard); 
                 }
             }
